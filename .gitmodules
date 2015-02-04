@@ -1,3 +1,3 @@
 [submodule "wp"]
-	path = wp
+	path = webroot/wp
 	url = git://github.com/WordPress/WordPress.git

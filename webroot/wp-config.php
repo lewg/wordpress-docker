@@ -81,8 +81,9 @@ $memcached_servers = array(
   )
 );
 
-define('WP_HOME','http://docker.local:8000');
-define('WP_SITEURL','http://docker.local:8000/wp');
+$hostname = (getenv("SITE_URL")) ? getenv("SITE_URL") : "http://docker.local:8000";
+define('WP_HOME',$hostname);
+define('WP_SITEURL',$hostname . '/wp');
 
 /* That's all, stop editing! Happy blogging. */
 
