@@ -7,5 +7,6 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
 ADD restore-db.sh /opt/restore-db.sh
 ADD supervisord.conf /etc/supervisor/supervisord.conf
 ADD default.conf /etc/nginx/conf.d/default.conf
-ADD www.conf /etc/php5/fpm/pool.d/www.conf
+ADD webroot /srv/www
+RUN chown -R root:root /srv/www
 CMD supervisord

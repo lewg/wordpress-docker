@@ -1,13 +1,12 @@
 web:
-  build: Docker/.
+  build: .
   ports:
     - "8000:80"
-    - "8002:9000"
   links:
     - db
     - memcache
   volumes:
-    - ./:/srv/www
+    - webroot:/srv/www
   command: supervisord -e debug
 db:
   image: orchardup/mysql
