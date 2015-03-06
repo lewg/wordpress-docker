@@ -1,10 +1,11 @@
-# Docker HHVM WordPress Base
+Docker HHVM WordPress Base
+==========================
 
 Because the way most people run WordPress in docker makes no sense.
 
 ## Things you may have to change
 
-* In `fig.yml`
+* In `docker-compose.yml`
   * Change the ports if you're running multiple versions of this setup
 * In `webroot/wp-config.php`:
   * Replace the salt section
@@ -13,4 +14,14 @@ Because the way most people run WordPress in docker makes no sense.
 
 * `replace-db.sh`: replace the variables and use it to pull a copy of
 your production database.
-    fig run web replace-db.sh
+    fig run web restore-db.sh
+
+
+## Development
+
+The webroot folder is mapped into the running vm in the docker-compose
+(previously known as fig) setup. To start run:
+
+    fig up
+
+And you'll find your site at `http://[your docker host]:8000`
