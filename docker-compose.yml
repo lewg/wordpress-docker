@@ -21,8 +21,13 @@ db:
     MYSQL_DATABASE: wordpress
     MYSQL_USER: wordpress
     MYSQL_PASSWORD: wordpress
-memcache:
-  image: octohost/memcached
-  command: memcached -m 128 -u daemon -l 0.0.0.0 -v
-  expose:
-    - "11211"
+# Uncomment the appropriate object cache:
+# memcache:
+#   image: octohost/memcached
+#   command: memcached -m 128 -u daemon -l 0.0.0.0 -v
+#   ports:
+#     - '8001:11211'
+# redis:
+#   image: redis:2.8.19
+#   ports:
+#     - '8003:6379'

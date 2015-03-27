@@ -1,0 +1,18 @@
+web:
+  build: .
+  ports:
+    - "8000:80"
+  environment:
+    DB_1_ENV_MYSQL_DATABASE: replace
+    DB_1_ENV_MYSQL_USER: replace
+    DB_1_ENV_MYSQL_PASSWORD: replace
+    DB_1_PORT_3306_TCP_ADDR: replace
+    DB_1_PORT_3306_TCP_PORT: replace
+    # REDIS_1_PORT_6379_TCP_ADDR: replace
+    # REDIS_1_PORT_6379_TCP_PORT: 6379
+    # REDIS_DB: 0
+    # AWS_ACCESS_KEY_ID: replace
+    # AWS_SECRET_ACCESS_KEY: replace
+    # MEMCACHE_1_PORT_11211_TCP_ADDR: replace
+    # MEMCACHE_1_PORT_11211_TCP_PORT: 11211
+  command: supervisord -e debug

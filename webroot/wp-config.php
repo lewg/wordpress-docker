@@ -78,11 +78,25 @@ define('DISABLE_WP_CRON', $debug);
 
 define( 'WP_AUTO_UPDATE_CORE', false );
 
+// Object Cache Fun:
+
+define('WP_CACHE_KEY_SALT', (getenv("WP_CACHE_SALT")) ? getenv("WP_CACHE_SALT") : "gnet-cache-");
+
 $memcached_servers = array(
   'default' => array(
     getenv("MEMCACHE_1_PORT_11211_TCP_ADDR") . ":" . getenv("MEMCACHE_1_PORT_11211_TCP_PORT"),
   )
 );
+
+# For Redis Object Cache
+define('WP_REDIS_CLIENT', 'hhvm');
+define('WP_REDIS_HOST', getenv('REDIS_1_PORT_6379_TCP_ADDR'));
+define('WP_REDIS_PORT', getenv('REDIS_1_PORT_6379_TCP_PORT'));
+define('WP_REDIS_DATABASE', (getenv('REDIS_DB')) ? getenv('REDIS_DB') : 1);
+
+# For AWS
+define( 'AWS_ACCESS_KEY_ID', getenv('AWS_ACCESS_KEY_ID') );
+define( 'AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY') );
 
 $hostname = (getenv("SITE_URL")) ? getenv("SITE_URL") : "http://docker.local:8000";
 define('WP_HOME',$hostname);
