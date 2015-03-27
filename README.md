@@ -5,6 +5,10 @@ Because the internet is full of WordPress in Docker tutorials that make me cring
 
 ## Things you may have to change
 
+If you look at `/webroot/wp-config.php` you'll see that the setup has been adjusted to run with WordPress
+in a subdirectory, and to take most config values you'd potentially have to change
+from environment variables. 
+
 * In `docker-compose.yml`
   * Change the ports if you're running multiple versions of this setup
   * Change SITE_URL to your docker host (if it's not localhost)
