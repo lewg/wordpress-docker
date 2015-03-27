@@ -5,7 +5,8 @@ web:
     - "8002:9000"
   links:
     - db
-    - memcache
+    # - memcache
+    # - redis
   volumes:
     - webroot:/srv/www
     - uploads:/srv/www/uploads

@@ -22,7 +22,7 @@ your production database. To run the script in a container:
 
     % docker-compose -f docker-tools.yml run tools sh sync-assets.sh [YOUR SFTP USERNAME]
 
-* The [Memcached-Redux](https://wordpress.org/plugins/memcached-redux/) and [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) plugins have been installed. To enable either, uncomment the appropriate section in the `docker-compose.yml` file and copy the `object-cache.php` file from that plugin's folder to the `/webroot/content/` folder.
+* The [Memcached-Redux](https://wordpress.org/plugins/memcached-redux/) and [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) plugins have been installed. To enable either, uncomment the appropriate sections (don't forget the links under web) in the `docker-compose.yml` file and copy the `object-cache.php` file from that plugin's folder to the `/webroot/content/` folder.
 
 * The [Amazon S3 and CloudFront](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) plugin and the [Amazon Web Services](https://wordpress.org/plugins/amazon-web-services/) plugin it depends on have been installed. I would highly recommend this if you're doing to run WordPress in a container. It will remove your dependency on volumes or shared storage if you run multiple instances of your site.
 
