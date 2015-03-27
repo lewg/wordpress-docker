@@ -2,11 +2,16 @@ web:
   build: .
   ports:
     - "8000:80"
+    - "8002:9000"
   links:
     - db
     - memcache
   volumes:
     - webroot:/srv/www
+    - uploads:/srv/www/uploads
+  environment:
+    SITE_URL: http://localhost:8000
+    WP_DEBUG: 1
   command: supervisord -e debug
 db:
   image: orchardup/mysql

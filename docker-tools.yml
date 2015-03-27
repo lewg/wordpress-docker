@@ -1,0 +1,14 @@
+tools:
+  build: tools/.
+  links:
+    - db
+  volumes:
+    - uploads:/opt/uploads
+db:
+  image: orchardup/mysql
+  ports:
+    - "8001:3306"
+  environment:
+    MYSQL_DATABASE: wordpress
+    MYSQL_USER: wordpress
+    MYSQL_PASSWORD: wordpress
