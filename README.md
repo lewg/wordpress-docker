@@ -26,6 +26,21 @@ your production database. To run the script in a container:
 
 * The [Amazon S3 and CloudFront](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) plugin and the [Amazon Web Services](https://wordpress.org/plugins/amazon-web-services/) plugin it depends on have been installed. I would highly recommend this if you're doing to run WordPress in a container. It will remove your dependency on volumes or shared storage if you run multiple instances of your site.
 
+* WordPress is setup as a submodule, and I'll try to keep this repo pinned
+to the latest version. Having said that, the first time you check this out, you'll need to run:
+
+      % git submodule init
+      % git submodule update
+
+  If you need to update it yourself, go into the `/webroot/wp/` folder and run:
+
+      % git fetch --tags
+      % git checkout [VERSION NUMBER]
+
+  Don't forget to commit your change in the main repo.
+
+
+
 
 ## Development
 
