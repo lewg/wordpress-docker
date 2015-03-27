@@ -1,7 +1,7 @@
 Docker HHVM WordPress Base
 ==========================
 
-Because the way most people run WordPress in docker makes no sense.
+Because the internet is full of WordPress in Docker tutorials that make me cringe!
 
 ## Things you may have to change
 
