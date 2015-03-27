@@ -2,7 +2,7 @@ web:
   build: .
   ports:
     - "8000:80"
-    - "8002:9000"
+    - "8001:9000"
   links:
     - db
     # - memcache
@@ -17,7 +17,7 @@ web:
 db:
   image: orchardup/mysql
   ports:
-    - "8001:3306"
+    - "8002:3306"
   environment:
     MYSQL_DATABASE: wordpress
     MYSQL_USER: wordpress
@@ -27,8 +27,8 @@ db:
 #   image: octohost/memcached
 #   command: memcached -m 128 -u daemon -l 0.0.0.0 -v
 #   ports:
-#     - '8001:11211'
+#     - '8003:11211'
 # redis:
 #   image: redis:2.8.19
 #   ports:
-#     - '8003:6379'
+#     - '8004:6379'
