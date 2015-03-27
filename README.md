@@ -1,5 +1,5 @@
-Docker HHVM WordPress Base
-==========================
+WordPress on Docker (and HHVM/Nginx) Base
+=========================================
 
 Because the internet is full of WordPress in Docker tutorials that make me cringe! For me, this is a better starting point.
 
@@ -7,7 +7,7 @@ Because the internet is full of WordPress in Docker tutorials that make me cring
 
 If you look at `/webroot/wp-config.php` you'll see that the setup has been adjusted to run with WordPress
 in a subdirectory, and to take most config values you'd potentially have to change
-from environment variables. 
+from environment variables.
 
 * In `docker-compose.yml`
   * Change the ports if you're running multiple versions of this setup
