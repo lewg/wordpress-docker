@@ -68,12 +68,15 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
-define('WP_DEBUG_DISPLAY', true);
-define('SAVEQUERIES', true);
 
-define('WP_AUTO_UPDATE_CORE', false);
-define('DISABLE_WP_CRON', true);
+$debug = (getenv('WP_DEBUG') == 1) ? true : false;
+
+define('WP_DEBUG', $debug);
+define('WP_DEBUG_DISPLAY', $debug);
+define('SAVEQUERIES', $debug);
+define('DISABLE_WP_CRON', $debug);
+
+define( 'WP_AUTO_UPDATE_CORE', false );
 
 $memcached_servers = array(
   'default' => array(
