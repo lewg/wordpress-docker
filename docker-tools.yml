@@ -3,7 +3,8 @@ tools:
   links:
     - db
   volumes:
-    - uploads:/opt/uploads
+    - webroot:/srv/www
+    - uploads:/srv/www/uploads
 db:
   image: orchardup/mysql
   ports:

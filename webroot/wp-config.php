@@ -16,16 +16,18 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', getenv("DB_1_ENV_MYSQL_DATABASE"));
+define('DB_NAME', (getenv("DB_1_ENV_MYSQL_DATABASE")) ? getenv("DB_1_ENV_MYSQL_DATABASE") : 'wordpress' );
 
 /** MySQL database username */
-define('DB_USER', getenv("DB_1_ENV_MYSQL_USER"));
+define('DB_USER', (getenv("DB_1_ENV_MYSQL_USER")) ? getenv("DB_1_ENV_MYSQL_USER") : 'wordpress' );
 
 /** MySQL database password */
-define('DB_PASSWORD', getenv("DB_1_ENV_MYSQL_PASSWORD"));
+define('DB_PASSWORD', (getenv("DB_1_ENV_MYSQL_PASSWORD")) ? getenv("DB_1_ENV_MYSQL_PASSWORD") : 'wordpress' );
 
 /** MySQL hostname */
-define('DB_HOST', getenv("DB_1_PORT_3306_TCP_ADDR") . ':' . getenv("DB_1_PORT_3306_TCP_PORT"));
+$db_hostname = getenv("DB_1_PORT_3306_TCP_ADDR") ? getenv("DB_1_PORT_3306_TCP_ADDR") : 'db_1';
+$db_port = getenv("DB_1_PORT_3306_TCP_PORT") ? getenv("DB_1_PORT_3306_TCP_PORT") : '3066';
+define('DB_HOST', $db_hostname . ':' . $db_port);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

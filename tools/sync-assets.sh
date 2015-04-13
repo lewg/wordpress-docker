@@ -4,4 +4,4 @@ if [ "$#" -ne 1 ]; then
 fi
 SFTP_HOST=replace
 UPLOAD_PATH=/wp-content/uploads
-lftp -c "user sftp://$1@$SFTP_HOST; mirror -n sftp://$1@$SFTP_HOST$UPLOAD_PATH /opt/uploads"
+lftp -c "user sftp://$1@$SFTP_HOST; mirror -n sftp://$1@$SFTP_HOST$UPLOAD_PATH /srv/www/uploads"
