@@ -15,10 +15,11 @@ web:
     WP_DEBUG: 1
   command: supervisord -e debug
 db:
-  image: orchardup/mysql
+  image: mysql
   ports:
     - "8002:3306"
   environment:
+    MYSQL_ROOT_PASSWORD: wordpress
     MYSQL_DATABASE: wordpress
     MYSQL_USER: wordpress
     MYSQL_PASSWORD: wordpress
