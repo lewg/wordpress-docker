@@ -6,10 +6,11 @@ tools:
     - webroot:/srv/www
     - uploads:/srv/www/uploads
 db:
-  image: orchardup/mysql
+  image: mysql
   ports:
     - "8001:3306"
   environment:
+    MYSQL_ROOT_PASSWORD: wordpress
     MYSQL_DATABASE: wordpress
     MYSQL_USER: wordpress
     MYSQL_PASSWORD: wordpress
