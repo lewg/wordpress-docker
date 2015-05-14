@@ -20,7 +20,7 @@ from environment variables.
 * `/tools/replace-db.sh`: replace the variables and use it to pull a copy of
 your production database. To run the script in a container:
 
-    % docker-compose -f docker-tools.yml run tools sh replace-db.sh
+    % docker-compose -f docker-tools.yml run tools sh restore-db.sh
 
 * `/tools/sync-assets.sh`: If you keep your production upload folder on disk and would like to mirror it to your local site, replace the variables in that file, and then:
 
