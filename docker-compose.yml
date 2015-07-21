@@ -26,7 +26,7 @@ db:
     MYSQL_PASSWORD: wordpress
 # Uncomment the appropriate object cache:
 # memcache:
-#   image: octohost/memcached
+#   image: memcached
 #   command: memcached -m 128 -u daemon -l 0.0.0.0 -v
 #   ports:
 #     - '8003:11211'
