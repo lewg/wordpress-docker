@@ -1,4 +1,4 @@
-FROM alpine:3.1
+FROM alpine:3.2
 RUN apk add --update mysql-client lftp openssh && rm -rf /var/cache/apk/*
 ADD . /opt/
 WORKDIR /opt

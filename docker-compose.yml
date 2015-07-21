@@ -10,6 +10,7 @@ web:
   volumes:
     - webroot:/srv/www
     - uploads:/srv/www/uploads
+    - /root/.wp-cli/cache
   environment:
     SITE_URL: http://localhost:8000
     WP_DEBUG: 1
