@@ -27,14 +27,18 @@ use Guzzle\Service\Resource\ResourceIteratorInterface;
  * Client to interact with Amazon Simple Email Service
  *
  * @method Model deleteIdentity(array $args = array()) {@command Ses DeleteIdentity}
+ * @method Model deleteIdentityPolicy(array $args = array()) {@command Ses DeleteIdentityPolicy}
  * @method Model deleteVerifiedEmailAddress(array $args = array()) {@command Ses DeleteVerifiedEmailAddress}
  * @method Model getIdentityDkimAttributes(array $args = array()) {@command Ses GetIdentityDkimAttributes}
  * @method Model getIdentityNotificationAttributes(array $args = array()) {@command Ses GetIdentityNotificationAttributes}
+ * @method Model getIdentityPolicies(array $args = array()) {@command Ses GetIdentityPolicies}
  * @method Model getIdentityVerificationAttributes(array $args = array()) {@command Ses GetIdentityVerificationAttributes}
  * @method Model getSendQuota(array $args = array()) {@command Ses GetSendQuota}
  * @method Model getSendStatistics(array $args = array()) {@command Ses GetSendStatistics}
  * @method Model listIdentities(array $args = array()) {@command Ses ListIdentities}
+ * @method Model listIdentityPolicies(array $args = array()) {@command Ses ListIdentityPolicies}
  * @method Model listVerifiedEmailAddresses(array $args = array()) {@command Ses ListVerifiedEmailAddresses}
+ * @method Model putIdentityPolicy(array $args = array()) {@command Ses PutIdentityPolicy}
  * @method Model sendEmail(array $args = array()) {@command Ses SendEmail}
  * @method Model sendRawEmail(array $args = array()) {@command Ses SendRawEmail}
  * @method Model setIdentityDkimEnabled(array $args = array()) {@command Ses SetIdentityDkimEnabled}
@@ -48,8 +52,8 @@ use Guzzle\Service\Resource\ResourceIteratorInterface;
  * @method ResourceIteratorInterface getListIdentitiesIterator(array $args = array()) The input array uses the parameters of the ListIdentities operation
  * @method ResourceIteratorInterface getListVerifiedEmailAddressesIterator(array $args = array()) The input array uses the parameters of the ListVerifiedEmailAddresses operation
  *
- * @link http://docs.aws.amazon.com/aws-sdk-php/guide/latest/service-ses.html User guide
- * @link http://docs.aws.amazon.com/aws-sdk-php/latest/class-Aws.Ses.SesClient.html API docs
+ * @link http://docs.aws.amazon.com/aws-sdk-php/v2/guide/service-ses.html User guide
+ * @link http://docs.aws.amazon.com/aws-sdk-php/v2/api/class-Aws.Ses.SesClient.html API docs
  */
 class SesClient extends AbstractClient
 {
@@ -61,7 +65,7 @@ class SesClient extends AbstractClient
      * @param array|Collection $config Client configuration data
      *
      * @return self
-     * @link http://docs.aws.amazon.com/aws-sdk-php/guide/latest/configuration.html#client-configuration-options
+     * @link http://docs.aws.amazon.com/aws-sdk-php/v2/guide/configuration.html#client-configuration-options
      */
     public static function factory($config = array())
     {

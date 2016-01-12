@@ -62,6 +62,7 @@ use Guzzle\Service\Resource\ResourceIteratorInterface;
  * @method Model disableGateway(array $args = array()) {@command StorageGateway DisableGateway}
  * @method Model listGateways(array $args = array()) {@command StorageGateway ListGateways}
  * @method Model listLocalDisks(array $args = array()) {@command StorageGateway ListLocalDisks}
+ * @method Model listVolumeInitiators(array $args = array()) {@command StorageGateway ListVolumeInitiators}
  * @method Model listVolumeRecoveryPoints(array $args = array()) {@command StorageGateway ListVolumeRecoveryPoints}
  * @method Model listVolumes(array $args = array()) {@command StorageGateway ListVolumes}
  * @method Model resetCache(array $args = array()) {@command StorageGateway ResetCache}
@@ -87,8 +88,8 @@ use Guzzle\Service\Resource\ResourceIteratorInterface;
  * @method ResourceIteratorInterface getListVolumeRecoveryPointsIterator(array $args = array()) The input array uses the parameters of the ListVolumeRecoveryPoints operation
  * @method ResourceIteratorInterface getListVolumesIterator(array $args = array()) The input array uses the parameters of the ListVolumes operation
  *
- * @link http://docs.aws.amazon.com/aws-sdk-php/guide/latest/service-storagegateway.html User guide
- * @link http://docs.aws.amazon.com/aws-sdk-php/latest/class-Aws.StorageGateway.StorageGatewayClient.html API docs
+ * @link http://docs.aws.amazon.com/aws-sdk-php/v2/guide/service-storagegateway.html User guide
+ * @link http://docs.aws.amazon.com/aws-sdk-php/v2/api/class-Aws.StorageGateway.StorageGatewayClient.html API docs
  */
 class StorageGatewayClient extends AbstractClient
 {
@@ -100,7 +101,7 @@ class StorageGatewayClient extends AbstractClient
      * @param array|Collection $config Client configuration data
      *
      * @return self
-     * @link http://docs.aws.amazon.com/aws-sdk-php/guide/latest/configuration.html#client-configuration-options
+     * @link http://docs.aws.amazon.com/aws-sdk-php/v2/guide/configuration.html#client-configuration-options
      */
     public static function factory($config = array())
     {
